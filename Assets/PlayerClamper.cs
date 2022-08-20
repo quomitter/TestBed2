@@ -27,7 +27,7 @@ public class PlayerClamper : MonoBehaviour
         viewPos.y = Mathf.Clamp(viewPos.y, screenBounds.y * -1 + objectHeight, screenBounds.y - objectHeight);
         transform.position = viewPos;
 
-        Debug.Log("viewPosX " + viewPos.x + " viewPosY" + viewPos.y);
+        //Debug.Log("viewPosX " + viewPos.x + " viewPosY" + viewPos.y);
 
     }
 }
