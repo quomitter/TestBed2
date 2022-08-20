@@ -17,5 +17,6 @@ public class PlayerController : MonoBehaviour
     {
         rb.AddForce(new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical")));
         rb.rotation = Mathf.Rad2Deg * Mathf.Atan2(Input.GetAxis("RVertical"),Input.GetAxis("RHorizontal"));
+
     }
 }
