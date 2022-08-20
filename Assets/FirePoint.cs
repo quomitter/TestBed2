@@ -44,8 +44,7 @@ public class FirePoint : MonoBehaviour
             GameObject clone = Instantiate(bullet1, firePoint.transform.position, firePoint.transform.rotation);
             //Physics2D.IgnoreCollision(clone.GetComponent<Collider2D>(), playership.GetComponent<Collider2D>());
             shooter = clone.GetComponent<Rigidbody2D>();
-            shooter.AddForce(new Vector2(1 * Mathf.Sin(player1.rotation), 1 * -Mathf.Cos(player1.rotation)) * bulletSpeed, ForceMode2D.Impulse);
-            Debug.Log(player1.rotation);
+            shooter.AddForce(-this.transform.right * bulletSpeed, ForceMode2D.Impulse);
             Destroy(clone.gameObject, 1f);
             lastShot = Time.time;
         }
