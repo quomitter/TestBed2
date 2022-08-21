@@ -39,7 +39,7 @@ public class FirePoint : MonoBehaviour
     public void DoFire()
     {
 
-        if (Time.time > fireRate + lastShot && Input.GetButtonDown("Fire1"))
+        if (Time.time > fireRate + lastShot && System.Convert.ToBoolean(Input.GetAxis("Fire1")))
         {
             GameObject clone = Instantiate(bullet1, firePoint.transform.position, firePoint.transform.rotation);
             //Physics2D.IgnoreCollision(clone.GetComponent<Collider2D>(), playership.GetComponent<Collider2D>());
